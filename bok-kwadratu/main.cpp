@@ -1,14 +1,21 @@
-//
-//  main.cpp
-//  bok-kwadratu
-//
-//  Created by Jakub Wtorkiewicz on 23/02/2022.
-//
-
 #include <iostream>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main() {
+    float x=0;
+    float d=0.0001;
+    
+    cout << "podaj x" << endl;
+    cin >> x;
+    
+    float a=1;
+    do {
+        a=(x/a + a)/2;
+    }
+    while (a- x/a > d);
+    
+    cout << a << endl;
+    
+    
     return 0;
 }
